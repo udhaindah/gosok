@@ -11,7 +11,7 @@ const BASE_URL = 'https://api.depined.org/api';
 
 // Fungsi untuk menampilkan banner ASCII art
 const displayBanner = () => {
-  console.log(chalk.green(figlet.textSync('🄱🅂🄼', { horizontalLayout: 'default' })));
+  console.log(chalk.green(figlet.textSync('BSM', { horizontalLayout: 'default' })));
 };
 
 // Format timestamps
@@ -245,7 +245,7 @@ const main = async () => {
   while (true) {
     console.clear();
     displayBanner(); // Tampilkan banner sebelum setiap refresh tabel
-    console.log(chalk.yellow('Bright Spot Min\n'));
+    console.log(chalk.yellow('Bright Spot Mine\n'));
     console.log(chalk.cyan('=== Menyala Abangku ===\n'));
     console.log(createStatsTable(accounts).toString());
     console.log(chalk.cyan('\n=== Activity Log ==='));
