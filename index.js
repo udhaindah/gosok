@@ -225,8 +225,6 @@ const readInputFiles = async () => {
 
 // Main function
 const main = async () => {
-  displayBanner(); // Tampilkan banner saat aplikasi dimulai
-
   const spinner = ora('Reading input files...').start();
   const { tokens, proxies } = await readInputFiles();
   spinner.succeed(`Loaded ${tokens.length} tokens and ${proxies.length} proxies`);
@@ -244,11 +242,9 @@ const main = async () => {
 
   while (true) {
     console.clear();
-    displayBanner(); // Tampilkan banner sebelum setiap refresh
     
-    // Hapus teks "Bright Spot Mine" dan "Menyala Abangku"
-    // console.log(chalk.yellow('Bright Spot Mine\n'));
-    // console.log(chalk.cyan('=== Menyala Abangku ===\n'));
+    // Hapus baris ini untuk menghilangkan banner
+    // displayBanner(); // Tampilkan banner sebelum setiap refresh
     
     console.log(chalk.cyan('\n=== Activity Log ==='));
 
@@ -309,4 +305,3 @@ const main = async () => {
     process.exit(1);
   }
 })();
-
