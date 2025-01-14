@@ -243,10 +243,8 @@ const main = async () => {
   while (true) {
     console.clear();
     
-    // Hapus baris ini untuk menghilangkan banner
-    // displayBanner(); // Tampilkan banner sebelum setiap refresh
-    
-    console.log(chalk.cyan('\n=== Activity Log ==='));
+    // Hapus baris ini untuk menghilangkan Activity Log
+    // console.log(chalk.cyan('\n=== Activity Log ==='));
 
     for (let i = 0; i < accounts.length; i++) {
       const account = accounts[i];
@@ -305,3 +303,4 @@ const main = async () => {
     process.exit(1);
   }
 })();
+
