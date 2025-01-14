@@ -244,10 +244,12 @@ const main = async () => {
 
   while (true) {
     console.clear();
-    displayBanner(); // Tampilkan banner sebelum setiap refresh tabel
-    console.log(chalk.yellow('Bright Spot Mine\n'));
-    console.log(chalk.cyan('=== Menyala Abangku ===\n'));
-    console.log(createStatsTable(accounts).toString());
+    displayBanner(); // Tampilkan banner sebelum setiap refresh
+    
+    // Hapus teks "Bright Spot Mine" dan "Menyala Abangku"
+    // console.log(chalk.yellow('Bright Spot Mine\n'));
+    // console.log(chalk.cyan('=== Menyala Abangku ===\n'));
+    
     console.log(chalk.cyan('\n=== Activity Log ==='));
 
     for (let i = 0; i < accounts.length; i++) {
@@ -273,6 +275,7 @@ const main = async () => {
         account.totalPoints = stats.totalPoints;
         account.lastUpdate = getTimestamp();
 
+        // Log success message with points only
         logSuccess(
           i + 1,
           `Ping successful (${account.proxyConfig ? account.proxyConfig.type : 'Direct'})`,
@@ -306,3 +309,4 @@ const main = async () => {
     process.exit(1);
   }
 })();
+
